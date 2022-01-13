@@ -1,0 +1,475 @@
+:root {
+  --max-width: 1100px;
+  --chocolate: #2a1501;
+  --chocolate-light: #581c0c;
+  --strawberry: #ffd3e1;
+  --rum-raisins: #fcf876;
+  --vanilla: #f7f7f7;
+  --banana: #f4ea8e;
+  --bubble-gum: #a6b1e1;
+  --chantilly: #f5f5f5;
+  --cherry: #c70039;
+  --cone: #efcfb6;
+  --stick: #fee2b3;
+  --spon: #e4e4e4;
+  --cone-lines: #cd8d7b;
+  --flavor-size: 3.5rem;
+  --min-width-flavors: 7.5rem;
+  --bowl-height: 2.4rem;
+  --bowl-widht: 9rem;
+  --plate-height: 1.8rem;
+  --plate-width: 14rem;
+  --pink: #faeee7;
+  --pink2: #ffcac2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #009fb7;
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--chocolate)), color-stop(var(--strawberry)), to(var(--rum-raisins)));
+  background-image: linear-gradient(to right, var(--chocolate), var(--strawberry), var(--rum-raisins));
+  color: var(--bubble-gum);
+  line-height: 5rem;
+  text-align: center;
+  -webkit-box-shadow: 0, 1rem 1rem, 1rem, #000;
+          box-shadow: 0, 1rem 1rem, 1rem, #000;
+}
+
+header h1 {
+  font-size: 2.7rem;
+  font-family: "Courgette", cursive;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  min-height: 89vh;
+}
+
+.container section {
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container section .ice-cream-ball {
+  width: var(--flavor-size);
+  height: var(--flavor-size);
+  border-radius: 50%;
+}
+
+.container section .cone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container section .cone .balls {
+  -webkit-transform: translateY(0.6rem);
+          transform: translateY(0.6rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container section .cone .balls .ball-1 {
+  background: var(--strawberry);
+  -webkit-transform: translateY(0.6rem);
+          transform: translateY(0.6rem);
+  z-index: 2;
+  height: 3rem;
+  border-top-left-radius: var(--flavor-size);
+  border-top-right-radius: var(--flavor-size);
+}
+
+.container section .cone .balls .ball-2 {
+  background: var(--rum-raisins);
+  z-index: 1;
+}
+
+.container section .cone-body {
+  height: 0;
+  width: 0;
+  border-left: 2rem solid transparent;
+  border-top: 6rem solid var(--cone);
+  border-right: 2rem solid transparent;
+  z-index: 2;
+}
+
+.container section .cone-body div {
+  background: var(--cone-lines);
+  height: 2.6rem;
+  width: 0.1rem;
+}
+
+.container section .cone-body-1 {
+  position: relative;
+  -webkit-transform: translate(-0.5rem, -6rem) rotate(35deg);
+          transform: translate(-0.5rem, -6rem) rotate(35deg);
+}
+
+.container section .cone-body-1::after {
+  content: "";
+  position: absolute;
+  background: var(--cone-lines);
+  height: 2.5rem;
+  width: 0.1rem;
+  -webkit-transform: rotate(-85deg) scaleY(1.3) translateY(0.3rem);
+          transform: rotate(-85deg) scaleY(1.3) translateY(0.3rem);
+}
+
+.container section .cone-body-2 {
+  -webkit-transform: translate(0.5rem, -7.5rem) rotate(35deg) scaleY(1.6);
+          transform: translate(0.5rem, -7.5rem) rotate(35deg) scaleY(1.6);
+}
+
+.container section .cone-body-2::after {
+  content: "";
+  position: absolute;
+  background: var(--cone-lines);
+  height: 2.3rem;
+  width: 0.1rem;
+  -webkit-transform: rotate(275deg) scaleY(1.1) translateX(-0.9rem);
+          transform: rotate(275deg) scaleY(1.1) translateX(-0.9rem);
+}
+
+.container section .cone-body-border {
+  position: relative;
+  -webkit-transform: translate(-0.1rem, -12.4rem) rotate(90deg) scaleY(1.5);
+          transform: translate(-0.1rem, -12.4rem) rotate(90deg) scaleY(1.5);
+}
+
+.container section .palet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container section .palet-head {
+  background: var(--chocolate-light);
+  width: 8rem;
+  height: 10rem;
+  border-radius: 4rem 4rem 0.5rem 0.5rem;
+}
+
+.container section .palet-head .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.container section .palet-head .line-1, .container section .palet-head .line-2 {
+  height: 5.8rem;
+  width: 1.5rem;
+  background: #44000d;
+  border-radius: 4rem 4rem 0.5rem 0.5rem;
+  -webkit-transform: translateY(3.1rem);
+          transform: translateY(3.1rem);
+}
+
+.container section .palet-stick {
+  width: 1.9rem;
+  height: 4.4rem;
+  background: var(--stick);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.container section .cherry {
+  -webkit-transform: translate(-0.1rem, 1.4rem);
+          transform: translate(-0.1rem, 1.4rem);
+}
+
+.container section .cherry .stick {
+  height: 1rem;
+  width: 0.3rem;
+  background: var(--cherry);
+  -webkit-transform: translate(0.8rem, 0.2rem) rotate(35deg);
+          transform: translate(0.8rem, 0.2rem) rotate(35deg);
+  border-radius: 180% 10% 0 0;
+}
+
+.container section .cherry .fruit {
+  height: 1.3rem;
+  width: 1.3rem;
+  background: var(--cherry);
+  border-radius: 50%;
+}
+
+.container section .chantilly {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(-0.1rem, 1rem);
+          transform: translate(-0.1rem, 1rem);
+}
+
+.container section .chantilly div {
+  border-radius: 50%;
+  background: var(--chantilly);
+}
+
+.container section .chantilly-1 {
+  height: 1rem;
+  width: 1.9rem;
+  -webkit-transform: translateY(0.3rem);
+          transform: translateY(0.3rem);
+}
+
+.container section .chantilly-2 {
+  height: 1.1rem;
+  width: 2.4rem;
+}
+
+.container section .tri-flavor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container section .tri-flavor .flavors {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container section .tri-flavor .flavors .strawberry {
+  background: var(--strawberry);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transform: translate(-0.3rem, 0.6rem);
+          transform: translate(-0.3rem, 0.6rem);
+  z-index: -1;
+}
+
+.container section .tri-flavor .flavors-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: var(--min-width-flavors);
+}
+
+.container section .tri-flavor .flavors-bottom div {
+  width: var(--flavor-size);
+  height: var(--flavor-size);
+  border-radius: 50%;
+}
+
+.container section .tri-flavor .flavors-bottom div:nth-child(1) {
+  background: var(--chocolate-light);
+}
+
+.container section .tri-flavor .flavors-bottom div:nth-child(2) {
+  background: var(--rum-raisins);
+}
+
+.container section .tri-flavor .flavors-bottom div:nth-child(3) {
+  width: 0.5rem;
+  height: 2.5rem;
+  border-radius: 0;
+  -webkit-transform: skew(-30deg, 10deg) translate(0.5rem, -0.5rem) scale(2, 2);
+          transform: skew(-30deg, 10deg) translate(0.5rem, -0.5rem) scale(2, 2);
+  background: var(--spon);
+  z-index: -1;
+}
+
+.container section .tri-flavor .bowl {
+  background: var(--spon);
+  height: var(--bowl-height);
+  width: var(--bowl-widht);
+  border-radius: 0.5rem 0.5rem 7rem 7rem;
+  -webkit-transform: translate(-0.2rem, -0.3rem);
+          transform: translate(-0.2rem, -0.3rem);
+}
+
+.container section .banana-split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container section .banana-split .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container section .banana-split .top-1 .chantilly {
+  -webkit-transform: translate(-0.5rem, 0.6rem);
+          transform: translate(-0.5rem, 0.6rem);
+}
+
+.container section .banana-split .top-1 .cherry {
+  -webkit-transform: translate(0.1rem, 1rem);
+          transform: translate(0.1rem, 1rem);
+}
+
+.container section .banana-split .top-2 .chantilly {
+  -webkit-transform: translate(0.5rem, 0.6rem);
+          transform: translate(0.5rem, 0.6rem);
+}
+
+.container section .banana-split .top-2 .cherry {
+  -webkit-transform: translate(1rem, 1rem);
+          transform: translate(1rem, 1rem);
+}
+
+.container section .banana-split ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container section .banana-split ul li {
+  width: var(--flavor-size);
+  height: var(--flavor-size);
+  border-radius: 50%;
+}
+
+.container section .banana-split ul li:nth-child(1) {
+  background: var(--chocolate-light);
+}
+
+.container section .banana-split ul li:nth-child(2) {
+  background: var(--strawberry);
+}
+
+.container section .banana-split ul li:nth-child(3) {
+  background: var(--rum-raisins);
+}
+
+.container section .banana-split .banana {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container section .banana-split .banana div {
+  width: 6.6rem;
+  height: 2.5rem;
+  background: var(--banana);
+}
+
+.container section .banana-split .banana-1 {
+  border-radius: 40% 0 0 180%;
+  -webkit-transform: translate(0.1rem, -0.6rem) rotate(10deg);
+          transform: translate(0.1rem, -0.6rem) rotate(10deg);
+}
+
+.container section .banana-split .banana-2 {
+  border-radius: 0 40% 180% 0;
+  -webkit-transform: translate(-0.1rem, -0.6rem) rotate(-10deg);
+          transform: translate(-0.1rem, -0.6rem) rotate(-10deg);
+}
+
+.container section .banana-split .plate {
+  width: var(--plate-width);
+  height: var(--plate-height);
+  background: var(--spon);
+  border-radius: 0.2rem 0.2rem 5rem 5rem;
+  -webkit-transform: translate(-0.2rem, -1.3rem);
+          transform: translate(-0.2rem, -1.3rem);
+}
